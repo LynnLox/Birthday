@@ -32,12 +32,3 @@ npm run build
 ## Credits
 
 - Inspired by tubik's [Furniture Ecommerce Website](https://dribbble.com/shots/11630366-Furniture-Ecommerce-Website) and Zhenya Rynzhuk's [Kati Forner Layouts Animation](https://dribbble.com/shots/11234009-Kati-Forner-Layouts-Animation)
-
-## Misc
-
-Follow Codrops: [Twitter](http://www.twitter.com/codrops), [Facebook](http://www.facebook.com/codrops), [GitHub](https://github.com/codrops), [Instagram](https://www.instagram.com/codropsss/)
-
-## License
-[MIT](LICENSE)
-
-Made with :blue_heart: by [Codrops](http://www.codrops.com)
