@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  gap: 0.5rem;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+:root {
+  background: black;
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Space between boxes */
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+    margin-top: 2rem;
+}
+
+/* Individual box */
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 180px; /* Adjusted box width */
+    height: 230px; /* Adjusted box height */
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+/* Container for images inside the box */
+.image-container {
+    width: 200px; /* Increased width */
+    height: 200px; /* Increased height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The image itself */
+.box-image {
+    width: 100px; /* Increased size */
+    height: 100px; /* Increased size */
+    object-fit: cover; /* Ensures image covers the box without distortion */
+}
+
+.neon-text {
+    position: relative;
+    font-family: "Press Start 2P", cursive;
+    font-size: 2.2rem; /* Reduced font size */
+    width: 100%;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px #bf4080;
+    color: #fffff7;
+    z-index: 10;
+}
+
+.neon-text::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 2.2rem; /* Match reduced font size */
+    color: #bf4080;
+    width: 100%;
+    height: 100%;
+    animation: animateTextColor 3s infinite linear;
+    z-index: -1;
+}
+
+.sub-text{
+    position: relative;
+    font-family: "Press Start 2P", cursive;
+    font-size: 1rem; 
+    width: 100%;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px #bf4080;
+    color: #fffff7;
+    z-index: 10;
+    text-align: center;
+}
+.sub-text::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 1rem; 
+    color: #bf4080;
+    width: 100%;
+    height: 100%;
+    animation: animateTextColor 3s infinite linear;
+    z-index: -1;
+}
+
+
+.rotating-text {
+    position: relative;
+    -webkit-text-stroke: 1px #bf4080;
+}
+
+.rotating-text::before {
+    animation: rotatingWord 2.8s linear infinite;
+}
+
+.rotating-text::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 8px;
+    animation: animateTextColor 3s infinite linear, rotatingWord 5s linear infinite;
+    z-index: -1;
+}
+
+@keyframes animateTextColor {
+    0% {
+        color: #00b4d8;
+    }
+    20% {
+        color: #bf4080;
+    }
+    50% {
+        color: #6f2ed8;
+    }
+    60% {
+        color: #fe5f55;
+    }
+    80% {
+        color: #e6f14a;
+    }
+    100% {
+        color: #00b4d8;
+    }
+}
+
+@keyframes rotatingWord {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    20% {
+        transform: translate(5px, 0px);
+    }
+    40% {
+        transform: translate(5px, 5px);
+    }
+    60% {
+        transform: translate(0px, 5px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
